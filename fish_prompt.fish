@@ -17,6 +17,20 @@ function fish_prompt
         set status_color $fish_color_error
     end
 
+    # vi mode
+    if test "$fish_key_bindings" = "fish_vi_key_bindings"
+      switch $fish_bind_mode
+        case default
+          segment brwhite red "cmd"
+        case insert
+          segment brwhite green "ins"
+        case replace-one
+          segment brwhite green "rep"
+        case visual
+          segment brwhite magenta "vis"
+      end
+    end
+
     # Change Dartfish symbol based on current location
     if pwd_is_home
         echo -sn (set_color -o $status_color) "⨉⪧ "
