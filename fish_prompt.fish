@@ -19,6 +19,7 @@ function fish_prompt
 
     # vi mode
     if test "$fish_key_bindings" = "fish_vi_key_bindings"
+      or test "$fish_key_bindings" = "fish_hybrid_key_bindings"
       switch $fish_bind_mode
         case default
           echo -sn (set_color -o cc3) "cmd " (set_color normal)
