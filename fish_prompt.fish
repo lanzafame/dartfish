@@ -21,13 +21,13 @@ function fish_prompt
     if test "$fish_key_bindings" = "fish_vi_key_bindings"
       switch $fish_bind_mode
         case default
-          echo -sn (set_color -o $fish_color_operator) "cmd"
+          echo -sn (set_color -o $fish_color_cwd_root) "cmd "
         case insert
-          echo -sn (set_color -o $fish_color_operator) "ins"
+          echo -sn (set_color -o 0fc) "ins "
         case replace-one
-          echo -sn (set_color -o $fish_color_operator) "rep"
+          echo -sn (set_color -o $fish_color_error) "rep "
         case visual
-          echo -sn (set_color -o $fish_color_operator) "vis"
+          echo -sn (set_color -o $fish_color_host) "vis "
       end
     end
 
