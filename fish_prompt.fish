@@ -21,13 +21,13 @@ function fish_prompt
     if test "$fish_key_bindings" = "fish_vi_key_bindings"
       switch $fish_bind_mode
         case default
-          segment brwhite red "cmd"
+          echo -sn (set_color -o $fish_color_operator) "cmd"
         case insert
-          segment brwhite green "ins"
+          echo -sn (set_color -o $fish_color_operator) "ins"
         case replace-one
-          segment brwhite green "rep"
+          echo -sn (set_color -o $fish_color_operator) "rep"
         case visual
-          segment brwhite magenta "vis"
+          echo -sn (set_color -o $fish_color_operator) "vis"
       end
     end
 
