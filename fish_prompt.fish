@@ -21,7 +21,7 @@ function fish_prompt
     if test "$fish_key_bindings" = "fish_vi_key_bindings"
       switch $fish_bind_mode
         case default
-          echo -sn (set_color -o $fish_color_cwd_root) "cmd "
+          echo -sn (set_color -o $fish_color_cwd_host) "cmd "
         case insert
           echo -sn (set_color -o 0fc) "ins "
         case replace-one
