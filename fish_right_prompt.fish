@@ -1,4 +1,20 @@
 function fish_right_prompt
+
+    # vi mode
+    if test "$fish_key_bindings" = "fish_vi_key_bindings"
+      or test "$fish_key_bindings" = "fish_hybrid_key_bindings"
+      switch $fish_bind_mode
+        case default
+          echo -sn (set_color -o cc3) "c " (set_color normal)
+        case insert
+          echo -sn (set_color -o 0fc) "i " (set_color normal)
+        case replace_one
+          echo -sn (set_color -o $fish_color_error) "r " (set_color normal)
+        case visual
+          echo -sn (set_color -o $fish_color_user) "v " (set_color normal)
+      end
+    end
+
     for color in $fish_color_error
         # If any of the colour variables aren't defined they're set to 'normal' colour
 
