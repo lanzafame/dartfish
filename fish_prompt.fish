@@ -19,9 +19,9 @@ function fish_prompt
 
     # Change Dartfish symbol based on current location
     if pwd_is_home
-        echo -sn (set_color -o $status_color) "λ "
+        echo -sn (set_color -o $status_color) "司令。"
     else
-        echo -sn (set_color -o df3daf) "λ "
+        echo -sn (set_color -o df3daf) "司令。"
     end
     set_color normal
 
