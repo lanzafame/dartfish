@@ -10,7 +10,7 @@ function fish_prompt
     end
 
     # Since there isn't a "official" colour variables for sucess colour, we've chose one.
-    set -l status_color 0fc
+    set -l status_color 875faf
 
     # If last command exited with an error change colour of the "Dartfish" in the prompt
     if test "$status_copy" -ne 0
