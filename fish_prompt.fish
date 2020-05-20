@@ -25,12 +25,10 @@ function fish_prompt
     end
     set_color normal
 
-    # If running in root mode or connected to some other host, display relavent information
-    if test 0 -eq (id -u $USER) -o ! -z "$SSH_CLIENT"
-        echo -sn (set_color -o $fish_color_user) (host_info "user")
-        echo -sn (set_color $fish_color_normal) "@"
-        echo -sn (set_color -o $fish_color_host) (host_info "host ")
-    end
+    # Always display the user and host
+    echo -sn (set_color -o $fish_color_user) (host_info "user")
+    echo -sn (set_color $fish_color_normal) "@"
+    echo -sn (set_color -o $fish_color_host) (host_info "host ")
     set_color normal
 
     # Switch colour variables based on current user
